@@ -39,7 +39,7 @@ export default function Home() {
                 src={market1}
                 alt="Picture of the author"
               />
-              <div className="w-[552px] h-[371px] border-2 border-sky-500 absolute bottom-[166px] right-[210px]"></div>
+              <div className="w-[552px] h-[371px] border-[1px] border-[#FFFFFF] absolute bottom-[166px] right-[210px]"></div>
             </div>
           </div>
         </div>
