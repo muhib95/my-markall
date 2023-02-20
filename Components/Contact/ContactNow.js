@@ -15,7 +15,7 @@ const ContactNow = () => {
       message,
     };
 
-    fetch("http://localhost:5000/contact", {
+    fetch("https://my-markall-backend.vercel.app/contact", {
       method: "POST", // or 'PUT'
       headers: {
         "Content-Type": "application/json",
