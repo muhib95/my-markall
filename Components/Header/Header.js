@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const Header = () => {
   return (
     <div className="navbar w-[1358px] m-0 mx-auto h-[43px] ">
@@ -53,20 +55,25 @@ const Header = () => {
             </li>
           </ul>
         </div>
-
-        <a className="btn btn-ghost normal-case text-xl">MARKALL</a>
+        <Link href="/" className="btn btn-ghost normal-case text-xl">
+          MARKALL
+        </Link>
+        {/* <a className="btn btn-ghost normal-case text-xl">MARKALL</a> */}
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
           <li>
-            <a>Service</a>
+            <Link href="/Services/Services">Service</Link>
+            {/* <a>Service</a> */}
           </li>
 
           <li>
-            <a>Pricing</a>
+            <Link href="/Pricing/Pricing">Pricing</Link>
+            {/* <a>Pricing</a> */}
           </li>
           <li>
-            <a>About Us</a>
+            <Link href="/About/About">About Us</Link>
+            {/* <a>About Us</a> */}
           </li>
         </ul>
       </div>
