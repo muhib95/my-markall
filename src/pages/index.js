@@ -43,7 +43,7 @@ export default function Home() {
                 alt="Picture of the author"
               />
               <Image
-                className="w-[552px] h-[371px] absolute bottom-[130px] right-[237px]"
+                className="w-[552px] h-[371px] absolute top-[100px] right-[237px]"
                 src={market2}
                 alt="Picture of the author"
               />

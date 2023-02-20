@@ -2,6 +2,37 @@ import Image from "next/image";
 import React from "react";
 
 const ContactNow = () => {
+  const handleContact = (e) => {
+    e.preventDefault();
+    const name = e.target.name.value;
+    const email = e.target.email.value;
+    const phone = e.target.phone.value;
+    const message = e.target.message.value;
+    const data = {
+      name,
+      email,
+      phone,
+      message,
+    };
+
+    fetch("http://localhost:5000/contact", {
+      method: "POST", // or 'PUT'
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("Success:", data);
+        if (data) {
+          alert("Contact Email send");
+        }
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
+  };
   return (
     <div className="grid grid-cols-2">
       <div className="bg-green-100 flex flex-col items-center text-left">
@@ -27,7 +58,10 @@ const ContactNow = () => {
             </p>
           </div>
           <div>
-            <form className="flex flex-col w-1/2 mx-auto mt-4">
+            <form
+              onSubmit={(e) => handleContact(e)}
+              className="flex flex-col w-1/2 mx-auto mt-4"
+            >
               <input
                 type="text"
                 id="name"
