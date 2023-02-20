@@ -4,8 +4,11 @@ import { Inter } from "@next/font/google";
 import styles from "@/styles/Home.module.css";
 import Header from "Components/Header/Header";
 import market1 from "../../public/Marketing 1.png";
+import market2 from "../../public/Rectangle 4.png";
 import Audiance from "Components/Audiance/Audiance";
 import Automation1 from "../../public/Automation 1.png";
+import OurCustomers from "Components/Customers/OurCustomers";
+import ContactNow from "Components/Contact/ContactNow";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -39,7 +42,11 @@ export default function Home() {
                 src={market1}
                 alt="Picture of the author"
               />
-              <div className="w-[552px] h-[371px] border-[1px] border-[#FFFFFF] absolute bottom-[166px] right-[210px]"></div>
+              <Image
+                className="w-[552px] h-[371px] absolute bottom-[130px] right-[237px]"
+                src={market2}
+                alt="Picture of the author"
+              />
             </div>
           </div>
         </div>
@@ -55,7 +62,7 @@ export default function Home() {
                 <h1 className="font-bold text-4xl">
                   Save precious time with automation
                 </h1>
-                <p className="font-normal text-3xl">
+                <p className="font-normal text-3xl my-4">
                   Lorem ipsum dolor sit amet consectetur. Sed id luctus posuere
                   massa leo purus cras commodo. Volutpat massa fusce sit libero
                   ut mollis risus.
@@ -71,6 +78,15 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </div>
+        {/* What our customers  part*/}
+        <div className="bg-[#FFFBEE] w-[1440px] h-[700px] py-[82px]">
+          <OurCustomers></OurCustomers>
+        </div>
+
+        {/* Contact now part */}
+        <div className="w-[1440px] h-[811px] mt-[115px]">
+          <ContactNow></ContactNow>
         </div>
       </div>
     </div>
